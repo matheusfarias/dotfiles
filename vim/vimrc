@@ -1,0 +1,53 @@
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 2.
+
+set shiftwidth=2    " Indents will have a width of 2
+
+set softtabstop=2   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
+
+set hlsearch        " hightlight search
+
+"Setting Crtl+v as paste and Crtl+y as yank (copy) using the clipboard
+"register
+map <C-v> "+p
+map <C-y> "+y
+
+filetype indent on
+
+set number
+set relativenumber
+
+"Hidding menu bar and tool bar from gvim
+set go-=m
+set go-=T
+
+" temp files configs
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+" -----------------
+
+"NERDTree configs
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+" ---------------
+
+"gvim font config
+if has("gui_running")
+   if has("gui_gtk3")
+        set guifont=SFMono\ Nerd\ Font\ Bold\ 10
+    endif
+endif
+" ----------
+
+"setting shift+tab
+inoremap <S-Tab> <C-d>
+
+syntax enable
+
+set background=dark  
